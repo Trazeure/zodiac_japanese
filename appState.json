@@ -1,0 +1,114 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "e14a21b0-84ba-4368-9199-4e0425ee31f6": {
+        "id": "e14a21b0-84ba-4368-9199-4e0425ee31f6",
+        "parent": null,
+        "name": "Zodiac_japanese.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Zodiac_japanese.py",
+        "cursor": {
+          "lineNumber": 23,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.9",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "Zodiacjapanese"
+        },
+        "triggers": [
+          {
+            "resourceName": "alexaSKd51340bb7aff4ad6bb9d29870c778247",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1638054869425,
+        "testCases": {
+          "d7343667-3991-4984-83fe-bf26bcc86ffd": {
+            "id": "d7343667-3991-4984-83fe-bf26bcc86ffd",
+            "name": "Test event",
+            "functionId": "e14a21b0-84ba-4368-9199-4e0425ee31f6",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "409539ed-512e-4d2f-8b1d-e583b875beec": {
+        "id": "409539ed-512e-4d2f-8b1d-e583b875beec",
+        "parent": null,
+        "name": "requirements.txt",
+        "type": "TEXT_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "requirements.txt"
+      }
+    },
+    "openFiles": [
+      "e14a21b0-84ba-4368-9199-4e0425ee31f6"
+    ],
+    "currentFileId": "e14a21b0-84ba-4368-9199-4e0425ee31f6",
+    "resources": {
+      "alexaSKd51340bb7aff4ad6bb9d29870c778247": {
+        "name": "alexaSKd51340bb7aff4ad6bb9d29870c778247",
+        "type": "ALEXA",
+        "config": {
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.d51340bb-7aff-4ad6-bb9d-29870c778247",
+          "applicationID": ""
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "ask_sdk_core": {
+          "name": "ask_sdk_core",
+          "version": "1.13.0",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.9.5",
+    "projectName": "Zodiac_japanese",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1638056495793
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "zodiac_japanese",
+      "url": "https://github.com/Trazeure/zodiac_japanese"
+    }
+  }
+}
