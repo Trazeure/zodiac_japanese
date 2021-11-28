@@ -1,3 +1,5 @@
+import boto3
+ddb = boto3.client("dynamodb")
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler
@@ -23,13 +25,26 @@ class JapaneseAnimalIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input) :
         year = handler_input.request_envelope.request.intent.slots['year'].value
-        speech_text="My custom Intent handler"
+        try:
+            data = ddb.get_item(
+                TableName="datos_zodiaco",
+                Key={
+                    'year': {
+                        'N': year
+                    }
+                }
+            )
+        except BaseException as e:
+            print(e)
+            raise(e)
+        speech_text= "Your animal is a "+ data['Item']['S'] + '.according of this data you are' + data['item']['Personality']['S']
         handler_input.response_builder.speak(speech_text).set_should_end_session(False)
         return handler_input.response_builder.response
 sb = SkillBuilder()
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_exception_handler(CatchAllExceptionHandler())
 sb.add_request_handler(JapaneseAnimalIntentHandler())
+
 def handler(event, context):
     return sb. lambda_handler() (event, context)
 

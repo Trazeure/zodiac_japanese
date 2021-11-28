@@ -11,7 +11,7 @@
         "isRemovable": true,
         "filePath": "Zodiac_japanese.py",
         "cursor": {
-          "lineNumber": 23,
+          "lineNumber": 53,
           "column": 1
         },
         "config": {
@@ -28,7 +28,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1638054869425,
+        "lastUpdated": 1638068410709,
         "testCases": {
           "d7343667-3991-4984-83fe-bf26bcc86ffd": {
             "id": "d7343667-3991-4984-83fe-bf26bcc86ffd",
@@ -64,12 +64,31 @@
           "skillID": "amzn1.ask.skill.d51340bb-7aff-4ad6-bb9d-29870c778247",
           "applicationID": ""
         }
+      },
+      "ddbdatoszodiaco": {
+        "name": "ddbdatoszodiaco",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-2:582016487400:table/datos_zodiaco",
+            "name": "datos_zodiaco",
+            "partitionKey": "year",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "",
+            "payPerRequest": true,
+            "mode": 1,
+            "secondaryIndexes": {}
+          }
+        }
       }
     },
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -89,6 +108,13 @@
           "version": "1.13.0",
           "dev": false,
           "language": "python"
+        },
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.16.43",
+          "dev": true,
+          "notRemovable": false
         }
       }
     }
@@ -98,11 +124,11 @@
     "projectName": "Zodiac_japanese",
     "projectDescription": "",
     "projectVersion": "1.0.0",
-    "projectRegion": "us-east-1",
+    "projectRegion": "us-east-2",
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1638056495793
+    "lastSave": 1638069133526
   },
   "VCS_STATE": {
     "provider": "GitHub",
