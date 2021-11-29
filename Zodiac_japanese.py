@@ -24,6 +24,7 @@ class JapaneseAnimalIntentHandler(AbstractRequestHandler):
         return is_intent_name("JapaneseAnimalIntent")(handler_input)
 
     def handle(self, handler_input) :
+
         year = handler_input.request_envelope.request.intent.slots['year'].value
         try:
             data = ddb.get_item(
@@ -37,7 +38,10 @@ class JapaneseAnimalIntentHandler(AbstractRequestHandler):
         except BaseException as e:
             print(e)
             raise(e)
-        speech_text= "Your animal is a "+ data['Item']['S'] + '.according of this data you are' + data['item']['Personality']['S']
+
+
+
+        speech_text= "Your animal is a "+ data['Item']['Animal']['S'] + '. would you like to know another fact? with this information, your personality according to the Japanese zodiac you are' + data['Item']['Personality']['S']
         handler_input.response_builder.speak(speech_text).set_should_end_session(False)
         return handler_input.response_builder.response
 sb = SkillBuilder()
