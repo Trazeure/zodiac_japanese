@@ -1,1 +1,1 @@
-# zodiac_japanese
+# alexa_app_zodiac_japanese
